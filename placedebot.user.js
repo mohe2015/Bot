@@ -190,10 +190,14 @@ function updateOrders() {
 	}).catch((e) => console.warn('Bestellungen können nicht geladen werden!', e));
 }
 
-
-function getCanvasId(x,y) {
-	return (x <1000) + (y<1000)*2
+function getCanvas(x, y) {
+    if (x <= 999) {
+        return y <= 999 ? 0 : 2;
+    } else {
+        return y <= 999 ? 1 : 3;
+    }
 }
+
 /**
  * Places a pixel on the canvas, returns the "nextAvailablePixelTimestamp", if succesfull
  * @param x
