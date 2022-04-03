@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         PlaceODW Bot
 // @namespace    https://github.com/mohe2015/Bot
-// @version      17
+// @version      18
 // @description  /r/place bot
 // @author       NoahvdAa, reckter, SgtChrome, nama17
 // @match        https://www.reddit.com/r/place/*
@@ -21,7 +21,7 @@ var placeOrders = [];
 var accessToken;
 var canvas = document.createElement('canvas');
 
-const VERSION = 17
+const VERSION = 18
 var UPDATE_PENDING = false;
 
 const COLOR_MAPPINGS = {
@@ -190,7 +190,7 @@ function updateOrders() {
 	}).catch((e) => console.warn('Bestellungen können nicht geladen werden!', e));
 }
 
-function getCanvas(x, y) {
+function getCanvasId(x, y) {
     if (x <= 999) {
         return y <= 999 ? 0 : 2;
     } else {
