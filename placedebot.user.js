@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         PlaceODW Bot
 // @namespace    https://github.com/mohe2015/Bot
-// @version      16
+// @version      17
 // @description  /r/place bot
 // @author       NoahvdAa, reckter, SgtChrome, nama17
 // @match        https://www.reddit.com/r/place/*
@@ -21,7 +21,7 @@ var placeOrders = [];
 var accessToken;
 var canvas = document.createElement('canvas');
 
-const VERSION = 16
+const VERSION = 17
 var UPDATE_PENDING = false;
 
 const COLOR_MAPPINGS = {
